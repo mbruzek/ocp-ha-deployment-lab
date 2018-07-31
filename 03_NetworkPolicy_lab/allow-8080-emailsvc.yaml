@@ -1,0 +1,18 @@
+# https://docs.openshift.com/container-platform/3.10/rest_api/apis-networking.k8s.io/v1.NetworkPolicy.html
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-8080-emailsvc
+spec:
+  podSelector:
+    matchLabels:
+      app: emailsvc
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          project: userregservices
+    ports:
+    - protocol: TCP
+      port: 8080
+# oc create -f allow-8080-emailsvc.yaml -n msinfra
