@@ -1,0 +1,1 @@
+# ocp-ha-deployment-lab
