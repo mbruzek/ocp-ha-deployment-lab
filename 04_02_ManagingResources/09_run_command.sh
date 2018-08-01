@@ -1,6 +1,7 @@
 #!/bin/bash
 set -x
-./08_generate_load.sh &
-./08_generate_load.sh &
-./08_generate_load.sh &
-./08_generate_load.sh &
+directory=$(dirname $0)
+$directory/08_generate_load.sh &
+$directory/08_generate_load.sh &
+$directory/08_generate_load.sh &
+$directory/08_generate_load.sh &
