@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: terminating-resourcequota
+spec:
+  hard:
+    pods: "26"
+    limits.cpu: "1"
+    limits.memory: "2Gi"
+  scopes:
+  - Terminating
