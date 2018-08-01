@@ -10,3 +10,6 @@ wget https://raw.githubusercontent.com/3scale/3scale-amp-openshift-templates/2.1
 echo "11. Create the 3scale AMP template and APIcast template."
 oc create -f amp.yml
 oc create -f apicast.yml
+
+echo "Show the templates that was just created."
+oc get template
