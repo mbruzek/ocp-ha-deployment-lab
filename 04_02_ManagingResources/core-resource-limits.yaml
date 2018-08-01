@@ -21,3 +21,4 @@ spec:
       default:
         cpu: "50m"
         memory: "100Mi"
+# oc create -f core-resource-limits.yaml -n test-hpa
