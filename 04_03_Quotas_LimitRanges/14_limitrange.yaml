@@ -9,19 +9,19 @@ spec:
         cpu: "6"
         memory: "2Gi"
       min:
-        cpu: "50m"
+        cpu: "100m"
         memory: "150Mi"
     - type: "Container"
       max:
         cpu: "6"
         memory: "2Gi"
       min:
-        cpu: "50m"
+        cpu: "100m"
         memory: "150Mi"
       default:
-        cpu: "50m"
+        cpu: "100m"
         memory: "150Mi"
       defaultRequest:
-        cpu: "50m"
+        cpu: "100m"
         memory: "150Mi"
 # oc create -f 14_limitrange.yaml
