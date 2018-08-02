@@ -6,14 +6,14 @@ spec:
   limits:
     - type: "Pod"
       max:
-        cpu: "4"
+        cpu: "6"
         memory: "2Gi"
       min:
         cpu: "50m"
-        memory: "5Mi"
+        memory: "150Mi"
     - type: "Container"
       max:
-        cpu: "4"
+        cpu: "6"
         memory: "2Gi"
       min:
         cpu: "50m"
@@ -24,4 +24,4 @@ spec:
       defaultRequest:
         cpu: "50m"
         memory: "150Mi"
-# oc create -f core-resource-limits.yaml -n test-hpa
+# oc create -f 14_limitrange.yaml

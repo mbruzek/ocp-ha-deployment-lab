@@ -5,7 +5,7 @@ metadata:
 spec:
   hard:
     pods: "26"
-    limits.cpu: "1"
-    limits.memory: "2Gi"
+    limits.cpu: "5"
+    limits.memory: "40Gi"
   scopes:
   - Terminating
