@@ -80,6 +80,22 @@ openshift_generate_no_proxy_hosts=False
 ######################
 
 
+######################
+# Global Proxy Configuration
+# These options configure HTTP_PROXY, HTTPS_PROXY, and NOPROXY environment
+# variables for docker and master services.
+openshift_http_proxy=http://isolated1.0a85.internal:8080
+openshift_https_proxy=http://isolated1.0a85.internal:8080
+openshift_no_proxy=".internal,172.30.0.0/16"
+#
+# Most environments do not require a proxy between OpenShift masters, nodes, and
+# etcd hosts. So automatically add those host names to the openshift_no_proxy list.
+# If all of your hosts share a common domain you may wish to disable this and
+# specify that domain above.
+openshift_generate_no_proxy_hosts=False
+######################
+
+
 # used for container-based install, not RPM
 system_images_registry=isolated1.0a85.internal:5000
 
@@ -91,7 +107,7 @@ openshift_docker_ent_reg=''
 # https://bugzilla.redhat.com/show_bug.cgi?id=1516534 target release 3.10
 oreg_url=isolated1.0a85.internal:5000/openshift3/ose-${component}:${version}
 
-openshift_examples_modify_imagestreams=true
+openshift_examples_modify_imagestreams=false
 openshift_docker_additional_registries=isolated1.0a85.internal:5000
 openshift_docker_insecure_registries=isolated1.0a85.internal:5000
 openshift_docker_blocked_registries=nonsense

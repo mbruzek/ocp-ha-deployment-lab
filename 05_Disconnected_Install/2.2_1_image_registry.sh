@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo "To use EPEL you need to makecache"
 
 rpm -i https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 echo "To use EPEL you need to issue the yum makecache."
